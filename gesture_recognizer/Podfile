@@ -1,0 +1,5 @@
+platform :ios, '13.4'
+
+target 'gesture_recognizer' do
+  pod 'AudioKit', '~> 4.0'
+end

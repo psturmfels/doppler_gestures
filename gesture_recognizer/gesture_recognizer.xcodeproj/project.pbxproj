@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02A24593243E93CE0068415A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A24592243E93CE0068415A /* AppDelegate.swift */; };
+		02A24595243E93CE0068415A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A24594243E93CE0068415A /* SceneDelegate.swift */; };
+		02A24597243E93CE0068415A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A24596243E93CE0068415A /* ViewController.swift */; };
+		02A2459A243E93CE0068415A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A24598243E93CE0068415A /* Main.storyboard */; };
+		02A2459C243E93D10068415A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A2459B243E93D10068415A /* Assets.xcassets */; };
+		02A2459F243E93D10068415A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A2459D243E93D10068415A /* LaunchScreen.storyboard */; };
+		AB4296A796B2F8893DC6951C /* libPods-gesture_recognizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1168F321C9B1920F0805A8CA /* libPods-gesture_recognizer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02A2458F243E93CE0068415A /* gesture_recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gesture_recognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A24592243E93CE0068415A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02A24594243E93CE0068415A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		02A24596243E93CE0068415A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02A24599243E93CE0068415A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02A2459B243E93D10068415A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02A2459E243E93D10068415A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02A245A0243E93D10068415A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1168F321C9B1920F0805A8CA /* libPods-gesture_recognizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gesture_recognizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		835C16F0160405E84CC589E4 /* Pods-gesture_recognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gesture_recognizer.debug.xcconfig"; path = "Target Support Files/Pods-gesture_recognizer/Pods-gesture_recognizer.debug.xcconfig"; sourceTree = "<group>"; };
+		E4F79B2F3BE565DE3AF9ECD0 /* Pods-gesture_recognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gesture_recognizer.release.xcconfig"; path = "Target Support Files/Pods-gesture_recognizer/Pods-gesture_recognizer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02A2458C243E93CE0068415A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB4296A796B2F8893DC6951C /* libPods-gesture_recognizer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02A24586243E93CE0068415A = {
+			isa = PBXGroup;
+			children = (
+				02A24591243E93CE0068415A /* gesture_recognizer */,
+				02A24590243E93CE0068415A /* Products */,
+				B3084CB2CED28EEB7C017686 /* Pods */,
+				F4EE67A05C7E24E52FE1E18C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		02A24590243E93CE0068415A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02A2458F243E93CE0068415A /* gesture_recognizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02A24591243E93CE0068415A /* gesture_recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				02A24592243E93CE0068415A /* AppDelegate.swift */,
+				02A24594243E93CE0068415A /* SceneDelegate.swift */,
+				02A24596243E93CE0068415A /* ViewController.swift */,
+				02A24598243E93CE0068415A /* Main.storyboard */,
+				02A2459B243E93D10068415A /* Assets.xcassets */,
+				02A2459D243E93D10068415A /* LaunchScreen.storyboard */,
+				02A245A0243E93D10068415A /* Info.plist */,
+			);
+			path = gesture_recognizer;
+			sourceTree = "<group>";
+		};
+		B3084CB2CED28EEB7C017686 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				835C16F0160405E84CC589E4 /* Pods-gesture_recognizer.debug.xcconfig */,
+				E4F79B2F3BE565DE3AF9ECD0 /* Pods-gesture_recognizer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4EE67A05C7E24E52FE1E18C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1168F321C9B1920F0805A8CA /* libPods-gesture_recognizer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02A2458E243E93CE0068415A /* gesture_recognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02A245A3243E93D10068415A /* Build configuration list for PBXNativeTarget "gesture_recognizer" */;
+			buildPhases = (
+				CF8838AC4499A50DBF281795 /* [CP] Check Pods Manifest.lock */,
+				02A2458B243E93CE0068415A /* Sources */,
+				02A2458C243E93CE0068415A /* Frameworks */,
+				02A2458D243E93CE0068415A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gesture_recognizer;
+			productName = gesture_recognizer;
+			productReference = 02A2458F243E93CE0068415A /* gesture_recognizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02A24587243E93CE0068415A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = LooseFuzz;
+				TargetAttributes = {
+					02A2458E243E93CE0068415A = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 02A2458A243E93CE0068415A /* Build configuration list for PBXProject "gesture_recognizer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02A24586243E93CE0068415A;
+			productRefGroup = 02A24590243E93CE0068415A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02A2458E243E93CE0068415A /* gesture_recognizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02A2458D243E93CE0068415A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02A2459F243E93D10068415A /* LaunchScreen.storyboard in Resources */,
+				02A2459C243E93D10068415A /* Assets.xcassets in Resources */,
+				02A2459A243E93CE0068415A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF8838AC4499A50DBF281795 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gesture_recognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02A2458B243E93CE0068415A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02A24597243E93CE0068415A /* ViewController.swift in Sources */,
+				02A24593243E93CE0068415A /* AppDelegate.swift in Sources */,
+				02A24595243E93CE0068415A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02A24598243E93CE0068415A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02A24599243E93CE0068415A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02A2459D243E93D10068415A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02A2459E243E93D10068415A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02A245A1243E93D10068415A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02A245A2243E93D10068415A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02A245A4243E93D10068415A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 835C16F0160405E84CC589E4 /* Pods-gesture_recognizer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A82QZKWKS8;
+				INFOPLIST_FILE = gesture_recognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LooseFuzz.gesture-recognizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02A245A5243E93D10068415A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F79B2F3BE565DE3AF9ECD0 /* Pods-gesture_recognizer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A82QZKWKS8;
+				INFOPLIST_FILE = gesture_recognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LooseFuzz.gesture-recognizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02A2458A243E93CE0068415A /* Build configuration list for PBXProject "gesture_recognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02A245A1243E93D10068415A /* Debug */,
+				02A245A2243E93D10068415A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02A245A3243E93D10068415A /* Build configuration list for PBXNativeTarget "gesture_recognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02A245A4243E93D10068415A /* Debug */,
+				02A245A5243E93D10068415A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02A24587243E93CE0068415A /* Project object */;
+}
