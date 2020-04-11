@@ -12,15 +12,41 @@ import AudioKitUI
 
 class ViewController: UIViewController {
     let oscillator: AKOscillator = AKOscillator()
-    let microphone: AKMicrophone = AKMicrophone()!
+    var microphone: AKMicrophone!
     var audioInputPlot: EZAudioPlot!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setup_audio_nodes()
+        create_play_button()
+        create_plot()
+        
+        do {
+            try AudioKit.start()
+        } catch {
+            print("Unexpected error starting audio engine: \(error)")
+        }
+    }
+    
+    func setup_audio_nodes() {
+        AKSettings.audioInputEnabled = true
+        oscillator.frequency = 3000
+        oscillator.amplitude = 1.0
+        
+        microphone = AKMicrophone()
+        let tracker: AKFrequencyTracker = AKFrequencyTracker(microphone, hopSize: 2048, peakCount: 20)
+        let silence: AKBooster = AKBooster(tracker, gain: 0)
+
+        let mixer: AKMixer = AKMixer(oscillator, silence)
+        AudioKit.output = mixer
+        AudioKit.output = oscillator
+    }
+    
+    func create_play_button() {
         let button: UIButton = UIButton(type: UIButton.ButtonType.system)
         button.frame = CGRect(origin: self.view.center, size: CGSize(width: 200.0, height: 50.0))
-        button.center = self.view.center
+        button.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 200.0)
         
         button.setTitle("Play Tone", for: UIControl.State.normal)
         if let title = button.titleLabel {
@@ -32,21 +58,20 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(button_up), for: UIControl.Event.touchUpInside)
         button.addTarget(self, action: #selector(button_up), for: UIControl.Event.touchUpOutside)
         self.view.addSubview(button)
-        
-        oscillator.frequency = 300
-        oscillator.amplitude = 0.5
-        
-        let tracker: AKFrequencyTracker = AKFrequencyTracker(microphone, hopSize: 2048, peakCount: 20)
-        let silence: AKBooster = AKBooster(tracker, gain: 0)
-        AudioKit.output = silence
-        
-        
-        
-        do {
-            try AudioKit.start()
-        } catch {
-            print("Unexpected error starting audio engine: \(error)")
-        }
+    }
+    
+    func create_plot() {
+        let plotSize: CGSize = CGSize(width: self.view.frame.width - 50.0, height: 200.0)
+        audioInputPlot = EZAudioPlot(frame: CGRect(origin: CGPoint.zero, size: plotSize))
+        audioInputPlot.center = self.view.center
+
+        let plot: AKNodeOutputPlot = AKNodeOutputPlot(microphone, frame: audioInputPlot.bounds)
+        plot.plotType = EZPlotType.rolling
+        plot.shouldFill = true
+        plot.shouldMirror = true
+        plot.color = UIColor.systemBlue
+        audioInputPlot.addSubview(plot)
+        self.view.addSubview(audioInputPlot)
     }
     
     @objc func button_down() {
