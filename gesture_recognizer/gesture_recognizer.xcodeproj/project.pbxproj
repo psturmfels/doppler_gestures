@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0249ABBE2443929B003DF298 /* BufferHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0249ABBD2443929B003DF298 /* BufferHandler.swift */; };
 		02A24593243E93CE0068415A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A24592243E93CE0068415A /* AppDelegate.swift */; };
 		02A24595243E93CE0068415A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A24594243E93CE0068415A /* SceneDelegate.swift */; };
 		02A24597243E93CE0068415A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A24596243E93CE0068415A /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0249ABBD2443929B003DF298 /* BufferHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferHandler.swift; sourceTree = "<group>"; };
 		02A2458F243E93CE0068415A /* gesture_recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gesture_recognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A24592243E93CE0068415A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02A24594243E93CE0068415A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				02A24592243E93CE0068415A /* AppDelegate.swift */,
 				02A24594243E93CE0068415A /* SceneDelegate.swift */,
 				02A24596243E93CE0068415A /* ViewController.swift */,
+				0249ABBD2443929B003DF298 /* BufferHandler.swift */,
 				02A24598243E93CE0068415A /* Main.storyboard */,
 				02A2459B243E93D10068415A /* Assets.xcassets */,
 				02A2459D243E93D10068415A /* LaunchScreen.storyboard */,
@@ -80,7 +83,6 @@
 				835C16F0160405E84CC589E4 /* Pods-gesture_recognizer.debug.xcconfig */,
 				E4F79B2F3BE565DE3AF9ECD0 /* Pods-gesture_recognizer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -191,6 +193,7 @@
 			files = (
 				02A24597243E93CE0068415A /* ViewController.swift in Sources */,
 				02A24593243E93CE0068415A /* AppDelegate.swift in Sources */,
+				0249ABBE2443929B003DF298 /* BufferHandler.swift in Sources */,
 				02A24595243E93CE0068415A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

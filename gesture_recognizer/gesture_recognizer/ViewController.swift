@@ -17,48 +17,47 @@ class ViewController: UIViewController {
     var micCopy2: AKBooster!
     var audioInputPlot: EZAudioPlot!
     var audioFFTPlot: AKNodeFFTPlot!
-    
-    var amplitudeTap: AKAmplitudeTap!
-    private let bufferSize: UInt32 = 2_048
+    var bufferHandler: BufferHandler!
+    var text: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupAudioNodes()
-        tapAudioNodes()
-        createPlayButton()
-        createPlots()
+//        createPlots()
+        setupText()
         
         do {
             try AudioKit.start()
         } catch {
             print("Unexpected error starting audio engine: \(error)")
         }
-    }
-    
-    func tapAudioNodes() {
-        microphone.avAudioUnitOrNode.installTap(onBus: 0,
-                                                bufferSize: bufferSize,
-                                                format: AudioKit.format,
-                                                block: handleTapBlock)
-    }
-    
-    private func handleTapBlock(buffer: AVAudioPCMBuffer, at time: AVAudioTime) {
-        guard let floatData: UnsafePointer = buffer.floatChannelData else { return }
-
-        let channelCount = Int(buffer.format.channelCount)
-        let length = UInt(buffer.frameLength)
-
-        let samples: Array = Array(UnsafeBufferPointer(start: $))
         
-        //        TODO: Check out this link
-        //        https://stackoverflow.com/questions/50805268/audiokit-how-to-get-real-time-floatchanneldata-from-microphone
-        //        https://github.com/AudioKit/AudioKit/tree/master/AudioKit/Common/Taps
+        oscillator.start()
     }
     
+    func setupText() {
+        self.text = UITextView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.frame.width, height: 100)))
+        self.text.center = self.view.center
+        self.text.textAlignment = NSTextAlignment.center
+        self.text.text = ""
+        self.text.font = UIFont.systemFont(ofSize: 64, weight: UIFont.Weight.medium)
+        self.view.addSubview(self.text)
+    }
+    
+    func updateText(dopplerRatio: Float) {
+        if dopplerRatio < 0.8 {
+            self.text.text = "Push"
+        } else if dopplerRatio > 2.0 {
+            self.text.text = "Pull"
+        } else {
+            self.text.text = ""
+        }
+    }
+
     func setupAudioNodes() {
         AKSettings.audioInputEnabled = true
-        oscillator.frequency = 3000
+        oscillator.frequency = 18000
         oscillator.amplitude = 1.0
         
         microphone = AKMicrophone()
@@ -66,30 +65,11 @@ class ViewController: UIViewController {
         micCopy1 = AKBooster(microphone)
         micCopy2 = AKBooster(microphone)
         
-        let tracker: AKFrequencyTracker = AKFrequencyTracker(microphone, hopSize: 4096, peakCount: 20)
-        let silence: AKBooster = AKBooster(tracker, gain: 0)
-
-        let mixer: AKMixer = AKMixer(oscillator, silence)
-        AudioKit.output = mixer
         AudioKit.output = oscillator
-    }
-    
-    func createPlayButton() {
-        let button: UIButton = UIButton(type: UIButton.ButtonType.system)
-        button.frame = CGRect(origin: self.view.center, size: CGSize(width: 200.0, height: 50.0))
-        button.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 200.0)
         
-    
-        button.setTitle("Play Tone", for: UIControl.State.normal)
-        if let title = button.titleLabel {
-            title.font = UIFont.systemFont(ofSize: 32.0)
-        }
-        
-        button.addTarget(self, action: #selector(receiveButtonTapped), for: UIControl.Event.touchUpInside)
-        button.addTarget(self, action: #selector(receiveButtonDown), for: UIControl.Event.touchDown)
-        button.addTarget(self, action: #selector(receiveButtonUp), for: UIControl.Event.touchUpInside)
-        button.addTarget(self, action: #selector(receiveButtonUp), for: UIControl.Event.touchUpOutside)
-        self.view.addSubview(button)
+        self.bufferHandler = BufferHandler(nodeToTap: microphone.avAudioUnitOrNode, withBufferSize: 2048)
+        self.bufferHandler.startTap()
+        self.bufferHandler.parentViewController = self
     }
     
     func createPlots() {
@@ -114,17 +94,6 @@ class ViewController: UIViewController {
         audioFFTPlot.gain = 100
         self.view.addSubview(audioFFTPlot)
         
-    }
-    
-    @objc func receiveButtonDown() {
-        oscillator.start()
-    }
-    
-    @objc func receiveButtonUp() {
-        oscillator.stop()
-    }
-
-    @objc func receiveButtonTapped() {
     }
 
 }
